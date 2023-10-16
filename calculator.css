@@ -1,0 +1,110 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(206, 204, 204);
+  
+}
+.calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.calculator{
+    width: 20vw;
+    height: 77vh;
+    margin-top: 20px;
+    border: solid black 1px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    
+}
+.display{
+    width: 20vw;
+    height: 20vh;
+    background-color:rgb(31, 27, 27);
+    font-size: 50px;
+    color:white;
+
+}
+.arithmetic{
+    width: 70vw;
+    height: 55vh;
+    display: flex;
+
+}
+.numbers{
+    width: 15vw;
+    height: 57vh;
+    background-color:rgb(37, 36, 36);
+
+}
+.numbers ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+}
+.numbers ul li button{
+    list-style-type: none;
+    padding: 20px;
+    background-color: rgb(37, 36, 36);
+    margin: 3px;
+    font-size: x-large;
+    border: solid rgb(37, 36, 36) 1px;
+    color: white;
+
+}
+.operators{
+    width: 5vw;
+    height: 57vh;
+    background-color: rgb(37, 36, 36);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.operators ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.operators ul li button{
+    list-style-type: none;
+    padding: 12px;
+    background-color: rgb(37, 36, 36);
+    margin: 3px;
+    font-size: 25px;
+    border: solid rgb(37, 36, 36) 1px;
+    color: rgb(31, 106, 177);
+
+}
+.answer  button{
+    padding: 10px;
+    background-color: rgb(31, 106, 177) !important;
+    color: white !important;
+    border: solid rgb(37, 36, 36) 1px;
+    border-radius: 5px;
+
+}
+.clear button{
+    color: rgb(31, 106, 177);
+    border: solid rgb(37, 36, 36) 1px;
+
+}
