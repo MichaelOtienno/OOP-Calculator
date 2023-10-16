@@ -1,43 +1,55 @@
-
-const display = document.querySelector('.display');
-const numbers = document.querySelectorAll('.numbers button');
-const operators = document.querySelectorAll('.operators button');
-const answer = document.querySelector('.answer button');
-const clear = document.querySelector('.clear button');
-
-//calculator function
-function evaluateExpression(expression) {
+class Calculator {
+  constructor() {
+    this.display = document.querySelector('.display');
+    this.numbers = document.querySelectorAll('.numbers button');
+    this.operators = document.querySelectorAll('.operators button');
+    this.answer = document.querySelector('.answer button');
+    this.clear = document.querySelector('.clear button');
+    this.initEventListeners();
+  }
+  calculation() {
+    const expression = this.display.textContent;
     try {
       const calculator = expression.replace(/[^-()\d/*+.]/g, '');
-      return new Function('return ' + calculator)();
+      const result = new Function('return ' + calculator)();
+      this.display.textContent = result;
     } catch (error) {
-      return 'Error';
+      this.display.textContent = 'Error';
     }
   }
+
+  initEventListeners() {
+    this.numbers.forEach(button => {
+      button.addEventListener('click', () => {
+        this.appendToDisplay(button.textContent);
+      });
+    });
+
+    this.operators.forEach(operator => {
+      operator.addEventListener('click', () => {
+        this.appendToDisplay(` ${operator.textContent} `);
+      });
+    });
+
+    this.answer.addEventListener('click', () => {
+      this.calculation();
+    });
+
+    this.clear.addEventListener('click', () => {
+      this.clearDisplay();
+    });
+  }
+
+  appendToDisplay(text) {
+    this.display.textContent += text;
+  }
+
   
-//numbers
-numbers.forEach(button => {
-  button.addEventListener('click', () => {
-    display.textContent += button.textContent;
-  });
-});
 
-//operators
-operators.forEach(operator => {
-  operator.addEventListener('click', () => {
-    display.textContent += ` ${operator.textContent} `;
-  });
-});
+  clearDisplay() {
+    this.display.textContent = '';
+  }
+}
 
+const calculator = new Calculator();
 
-// calculation
-answer.addEventListener('click', () => {
-    const expression = display.textContent;
-    const result = evaluateExpression(expression);
-    display.textContent = result;
-  });
-  
-//erase display
-clear.addEventListener('click', () => {
-  display.textContent = '';
-});
