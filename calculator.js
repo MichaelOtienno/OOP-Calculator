@@ -44,8 +44,6 @@ class Calculator {
     this.display.textContent += text;
   }
 
-  
-
   clearDisplay() {
     this.display.textContent = '';
   }
