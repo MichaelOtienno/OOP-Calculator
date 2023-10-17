@@ -7,6 +7,7 @@ class Calculator {
     this.clear = document.querySelector('.clear button');
     this.initEventListeners();
   }
+  
   calculation() {
     const expression = this.display.textContent;
     try {
@@ -27,7 +28,7 @@ class Calculator {
 
     this.operators.forEach(operator => {
       operator.addEventListener('click', () => {
-        this.appendToDisplay(` ${operator.textContent} `);
+        this.appendToDisplay(button.textContent);
       });
     });
 
