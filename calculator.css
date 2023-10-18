@@ -112,17 +112,24 @@ body {
     border: solid 1px #555;
 }
 
-/* media queries */
 @media screen and (max-width: 720px) {
-    .numbers ul li button{
-        padding:20px
+    .numbers ul li button {
+        padding: 15px; 
     }
-    .operators ul li button{
-        padding: 20px;
+    .operators ul li button {
+        padding: 15px; 
     }
-    .numbers{
-        height: 100%;
+    .numbers {
+        height: auto; 
     }
-
-    
+    .nav {
+        height: 40px; 
+    }
+    .calculator {
+        width: 95%;
+        max-width: none; 
+    }
+    .display {
+        font-size: 30px; 
+    }
 }
