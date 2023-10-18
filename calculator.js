@@ -28,7 +28,7 @@ class Calculator {
 
     this.operators.forEach(operator => {
       operator.addEventListener('click', () => {
-        this.appendToDisplay(button.textContent);
+        this.appendToDisplay(operator.textContent);
       });
     });
 
