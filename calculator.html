@@ -1,62 +1,106 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="./calculator.css">
+    <title>Document</title>
+    <style>
+       body{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; 
+        background-color:  #1b1b1a;
+  
+       }
+        .number{
+            padding: 20px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: #c9c9c9;
+            color: black;
+            font-size: large;
+
+        }
+        .operators,.answer,.clear,.clearEntry{
+            padding: 20px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color:#6494d3;
+            color: white;
+            font-size: large;
+            font-weight: bold;
+
+        }
+        .display{
+            border: solid grey 3px;
+            width: 300px;
+            height: 100px;
+            font-size: 40px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+       
+        .box{
+            border: solid gray 3px;
+            height: 370px;
+            width: 295px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items:center ;
+            justify-content: space-around;
+            padding: 3px;
+            background-color:#313131;
+            border-radius: 5px;
+            
+        }
+        @media screen and (max-width:720px){
+           
+     
+
+
+
+        }
+    </style>
 </head>
-
 <body>
-    <div class="nav">
-        <h2>CALCULATOR</h2>
-
+    <div class="display">
     </div>
-    <div class="calc">
-        <div class="calculator">
-            <div class="display">
-
-            </div>
-            <div class="arithmetic">
-                <div class="numbers">
-                    <ul>
-                        <li><button>9</button></li>
-                        <li><button>8</button></li>
-                        <li><button>7</button></li>
-                        <li><button>6</button></li>
-                        <li><button>5</button></li>
-                        <li><button>4</button></li>
-                        <li><button>3</button></li>
-                        <li><button>2</button></li>
-                        <li><button>1</button></li>
-                        <li><button>%</button></li>
-                        <li><button>0</button></li>
-                        <li><button>.</button></li>
-                    </ul>
-
-                </div>
-                <div class="operators">
-                    <ul>
-                        <li class="clear"><button>x</button></li>
-                        <li class="operator"><button>+</button></li>
-                        <li class="operator"><button>-</button></li>
-                        <li class="operator"><button>*</button></li>
-                        <li class="operator"><button>/</button></li>
-                        <li class="answer"><button>=</button></li>
-                        
-                    </ul>
-                    
-                   
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
     
+    <div class="box">
+        <button class="clear">C</button>
+        <button class="operators" value="%">%</button>
+        <button class="operators" value="*">*</button>
+        <button class="clearEntry">CE</button>
+        <button class="number" value="7">7</button>
+        <button class="number" value="8">8</button>
+        <button class="number" value="9">9</button>
+        <button class="operators" value="-">-</button>
+        <button class="number" value="4">4</button>
+        <button class="number" value="5">5</button>
+        <button class="number" value="6">6</button>
+        <button class="operators" value="+">+</button>
+        <button class="number" value="1">1</button>
+        <button class="number" value="2">2</button>
+        <button class="number" value="3">3</button>
+     
+       
+    
+       
+        <button class="operators" value="/">/</button>
+        <button class="operators" value="0">0</button>
+        <button class="operators" value=".">.</button>
+        <button class="operators" value="^">^</button>
+        
+        <button class="answer">=</button>
+        
 
+
+    </div>
+   
+
+   
 </body>
-<script src="calculator.js"></script>
-
+<script src="./calculator.js"></script>
 </html>
