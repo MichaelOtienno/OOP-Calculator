@@ -2,69 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-       body{
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh; 
-        background-color:  #1b1b1a;
-  
-       }
-        .number{
-            padding: 20px;
-            margin: 5px;
-            border-radius: 5px;
-            background-color: #c9c9c9;
-            color: black;
-            font-size: large;
-
-        }
-        .operators,.answer,.clear,.clearEntry{
-            padding: 20px;
-            margin: 5px;
-            border-radius: 5px;
-            background-color:#6494d3;
-            color: white;
-            font-size: large;
-            font-weight: bold;
-
-        }
-        .display{
-            border: solid grey 3px;
-            width: 300px;
-            height: 100px;
-            font-size: 40px;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
-        }
-       
-        .box{
-            border: solid gray 3px;
-            height: 370px;
-            width: 295px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items:center ;
-            justify-content: space-around;
-            padding: 3px;
-            background-color:#313131;
-            border-radius: 5px;
-            
-        }
-        @media screen and (max-width:720px){
-           
-     
-
-
-
-        }
-    </style>
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="./calculator.css">
 </head>
 <body>
+            <button class="lightModeButton">Light Mode</button>
+      
     <div class="display">
     </div>
     
@@ -103,4 +46,6 @@
    
 </body>
 <script src="./calculator.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
